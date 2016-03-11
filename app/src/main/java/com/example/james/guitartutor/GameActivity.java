@@ -17,6 +17,7 @@ import be.tarsos.dsp.pitch.PitchDetectionResult;
 import be.tarsos.dsp.pitch.PitchProcessor;
 
 public class GameActivity extends Activity {
+float Pitch = 0;
     // @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,17 +27,29 @@ public class GameActivity extends Activity {
         AudioDispatcher dispatcher = AudioDispatcherFactory.fromDefaultMicrophone(22050, 1024, 0);
 
         PitchDetectionHandler pdh = new PitchDetectionHandler() {
-            @Override
             public void handlePitch(PitchDetectionResult result, AudioEvent e) {
                 final float pitchInHz = result.getPitch();
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
 
-                        TextView text = (TextView) findViewById(R.id.textView1);
+                        //guitar tuner
+                        TextView text = (TextView) findViewById(R.id.testView);
                         text.setText("" + pitchInHz);
 
+                            if (pitchInHz >= 108.00 && pitchInHz <= 112.00 ){
+                               TextView test = (TextView) findViewById(R.id.textView1);
+                               test.setText(" A ");
+
+                           } else {
+                                TextView test = (TextView) findViewById(R.id.textView1);
+                                test.setText(" ? ");
+                            }
                     }
+
+
+
+
 
                 });
             }

@@ -24,4 +24,14 @@
         android:backgroundTintMode="src_in"
         android:textColor="#27f70f"
         android:textSize="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/testView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
 </RelativeLayout>
