@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GuitarTutor</string>
+    <string name="play_button_text">Enter</string>
+    <string name="email_form">E-mail</string>
+    <string name="password_form">Password</string>
+    <string name="title_activity_game">GameActivity</string>
+</resources>
